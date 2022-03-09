@@ -35,7 +35,7 @@ console.log(supplyChanges);//checking that 25 was added to end of array
 //    - if the value is 0, log 'No Change.'
 //    - if the value is negative, format the log as 'Removed x parts.' 
 console.log('6. Showing supplyChanges...');
-for (i=0; i<supplyChanges.length; i++){
+for (let i=0; i<supplyChanges.length; i++){
     console.log(supplyChanges[i]);
     if (supplyChanges[i]>0){
         console.log(`Added ${supplyChanges[i]} parts.`);
@@ -66,7 +66,7 @@ for (item of supplyChanges){
 //    adding up all the numbers in the 'supplyChanges' array.
 console.log('8. Total supplies available is:');
 let currentSum = 0;
-for (i=0; i<supplyChanges.length; i++){
+for (let i=0; i<supplyChanges.length; i++){
     currentSum = currentSum + supplyChanges[i];
     // to check each iteration of the loop, can use this here: console.log(currentSum);
 }
@@ -79,3 +79,14 @@ console.log(currentSum);
 //    no more boxes can be filled.
 //    Then log how many boxes were filled, and how many parts are left over.
 console.log('9. Filling boxes with a "while" loop');
+let boxedParts = 0;
+let partsLoose = 572;
+let boxNumber = 0;
+while (partsLoose >7){
+    partsLoose = partsLoose-7;
+    //boxedParts = boxedParts+7; bonus to check the # parts total in boxes
+    boxNumber++;
+}
+console.log('Parts left over:', partsLoose);
+console.log('Boxes Filled:', boxNumber);
+//console.log('Parts in boxes:', boxedParts); to check the # parts in boxes
